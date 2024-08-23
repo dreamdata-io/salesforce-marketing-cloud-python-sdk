@@ -191,6 +191,7 @@ class ET_Get(ET_Constructor):
                 ws_retrieveRequest.Filter = ws_simpleFilterPart
 
         if options is not None:
+            ws_retrieveRequest.Options = {}
             for key, value in options.items():
                 if isinstance(value, dict):
                     for k, v in value.items():
